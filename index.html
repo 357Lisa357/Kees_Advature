@@ -9,7 +9,25 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Bernie&#39;s Refence.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Bernie&#39;s Refence" startnode="13" creator="Twine" creator-version="2.8.0" format="Harlowe" format-version="3.3.7" ifid="DFC67BE3-B0B5-4634-A364-FE544BE3AB37" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="intro_poam" tags="" position="700,300" size="100,100">&#39;&#39;Read this out loud&#39;&#39;
+<tw-storydata name="Bernie&#39;s Refence" startnode="1" creator="Twine" creator-version="2.8.0" format="Harlowe" format-version="3.3.7" ifid="DFC67BE3-B0B5-4634-A364-FE544BE3AB37" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story{
+	background-image:url("https://img.freepik.com/free-photo/vintage-grunge-paper-background_1048-10911.jpg");
+	background-size:cover;
+}
+
+tw-sidebar {
+	visibility: hidden
+}
+
+tw-passage {
+	text-align: center; 
+	color:black;
+}
+
+tw-link {
+	color: red;
+}
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="intro_poam" tags="" position="700,300" size="100,100">&#39;&#39;Read this out loud&#39;&#39;
 
 In the realm of dreams and winter&#39;s delight,
 Where Sinterklaas weaves magic in the night,
@@ -39,9 +57,9 @@ For Kees, the hero, in this fantasy.&quot;
 [[Start the advanture -&gt;piet intro]]
 </tw-passagedata><tw-passagedata pid="2" name="piet intro" tags="" position="700,425" size="100,100">As you stand before Sinterklaas&#39; castle, anticipation buzzes in the air. Roleplay Piet approaches, a mischievous gleam in his eye.
 
-&quot;Your adventure begins here, dear adventurer. Start amid the candy road, follow their glow to the speculaas Village. There, in the spiced air, a clue in Speculaas whispers awaits. Traverse Pepernoten Canyon and Stroopwafel Meadow, each with its own charm. Finally, reach Pakjesavond Plaza, where your eagerly awaited present awaits.&quot;
+&quot;Your adventure begins here, dear adventurers. Take the rest of your party alonge on this quest. Start amid the candy road, follow their glow to the speculaas Village. There, in the spiced air, a clue in Speculaas whispers awaits. Traverse Pepernoten Canyon and Stroopwafel Meadow, each with its own charm. Finally, reach Pakjesavond Plaza, where your eagerly awaited present awaits.&quot;
 
-Piet&#39;s mischievous grin hints at the magic to come as you prepare to embark on a whimsical journey through the enchanting realms of Pakjesavond.
+Piet&#39;s mischievous grin hints at the advanture to come as you prepare to embark on a whimsical journey through the enchanting realms of Pakjesavond.
 
 [[follow the candy road -&gt;candy road]] </tw-passagedata><tw-passagedata pid="3" name="story outline" tags="" position="475,475" size="100,100">Title: &quot;Sinterklaas&#39; Enchanted Quest&quot;
 
@@ -79,24 +97,28 @@ Finally, the Talking Stroopwafel Tree guides you to Pakjesavond Plaza, where you
 
 Congratulations! You&#39;ve successfully completed the quest and found your Sinterklaas present.
 
-Feel free to customize the riddles and challenges based on the preferences and interests of the person for whom you&#39;re creating the adventure. Enjoy the Sinterklaas celebration!</tw-passagedata><tw-passagedata pid="4" name="candy road" tags="" position="700,600" size="100,100">As you tread along the Candy Road, the air is filled with the sweet fragrance of confectionery. The vibrant path is lined with towering candy, creating a whimsical atmosphere. Suddenly, two chocolate frogs leap out from behind a candy bush, playfully blocking the road. Their shiny wrappers shimmer in the sugary light, and they seem to wear mischievous expressions.
+Feel free to customize the riddles and challenges based on the preferences and interests of the person for whom you&#39;re creating the adventure. Enjoy the Sinterklaas celebration!</tw-passagedata><tw-passagedata pid="4" name="candy road" tags="" position="700,550" size="100,100">As you tread along the Candy Road, the air is filled with the sweet fragrance of confectionery. The vibrant path is lined with towering candy, creating a whimsical atmosphere. Suddenly, two chocolate frogs leap out from behind a candy bush, playfully blocking the road. Their shiny wrappers shimmer in the sugary light, and they seem to wear mischievous expressions.
 
-The chocolate frogs gaze at you, and then, with a synchronized hop, they pose a question: &quot;I&#39;m sweet and sticky, a treat for your tea, hidden among leaves, what am I?&quot; Their eyes glint with anticipation, waiting for your answer. It seems the enchanted Candy Road has its own challenges, and the chocolate frogs won&#39;t budge until you provide the correct response.
+The chocolate frogs gaze at you, and then, with a synchronized hop, they pose a question: 
 
-[[awnser the question -&gt;q1]]</tw-passagedata><tw-passagedata pid="5" name="q1" tags="" position="900,600" size="100,100">(set: $awnser to &quot;&quot;)
+//&quot;I&#39;m sweet and sticky, a treat for your tea, hidden among leaves, what am I?&quot;//
+
+Their eyes glint with anticipation, waiting for your answer. It seems the enchanted Candy Road has its own challenges, and the chocolate frogs won&#39;t budge until you provide the correct response.
+
+[[awnser the question -&gt;q1]]</tw-passagedata><tw-passagedata pid="5" name="q1" tags="" position="700,675" size="100,100">(set: $awnser to &quot;&quot;)
 (set: $awnser to (prompt:&quot;I&#39;m sweet and sticky, a treat for your tea, hidden among leaves, what am I?&quot;,&quot;&quot;))
 
 (if:$awnser is &quot;honey&quot; or $awnser is &quot;Honey&quot;)
 [As you confidently answer the chocolate frogs&#39; riddle, a magical shimmer surrounds them. With a joyous hop, the chocolate frogs leap aside, clearing the Candy Road for your onward journey. The path ahead beckons, and you continue your adventure through the enchanting sweetness of the Speculaas Village. [[Continue -&gt;speculaas village]]]
 (else:)
-[(go-to:&quot;q1wrong&quot;)]
+[The frogs jump up and down.. no no no, that is not correct [[try again -&gt;q1]] ]
 
-</tw-passagedata><tw-passagedata pid="6" name="speculaas village" tags="" position="900,725" size="100,100">With the chocolate frogs playfully hopping out of your way, you continue along the Candy Road, the sugary landscape unfolding before you. The Speculaas Village awaits, promising more delights and clues on your enchanting quest. As you walk further, the air is filled with the comforting scent of sweets, guiding you toward the next chapter of your magical adventure.
+</tw-passagedata><tw-passagedata pid="6" name="speculaas village" tags="" position="700,800" size="100,100">With the chocolate frogs playfully hopping out of your way, you continue along the Candy Road, the sugary landscape unfolding before you. The Speculaas Village awaits, promising more delights and clues on your enchanting quest. As you walk further, the air is filled with the comforting scent of sweets, guiding you toward the next chapter of your magical adventure.
 
-Entering the Speculaas Village, you find yourself surrounded by quaint houses made of spiced wonders. The air is infused with the warm and comforting aroma of Speculaas cookies. The streets are lined with gingerbread delights, and the villagers, shaped like sweet spices, seem to greet you with a fragrant welcome.
+Entering the Speculaas Village, you find yourself surrounded by quaint houses made of  wonders. The air is infused with the warm and comforting aroma of Speculaas cookies. you see a sign hang in the center of the village
 
-[[walk on -&gt;The house]]
-</tw-passagedata><tw-passagedata pid="7" name="The house" tags="" position="900,850" size="100,100">On an parchment on one of the houses, you find the next riddle:
+[[Read the sign -&gt;The sign]]
+</tw-passagedata><tw-passagedata pid="7" name="The sign" tags="" position="700,925" size="100,100">The sign says the following:
 
 &quot;In spices&#39; embrace, where whispers play,
 A canyon awaits in a sugary array.
@@ -105,69 +127,67 @@ Crack the riddle, and Pepernoten Canyon secrets it keeps.&quot;
 
 Solve this riddle, and the path to Pepernoten Canyon will unfold before you in the Speculaas Village. 
 
-[[awnser -&gt;q2]]</tw-passagedata><tw-passagedata pid="8" name="q2" tags="" position="1100,875" size="100,100">(set: $awnser to &quot;&quot;)
+[[awnser -&gt;q2]]</tw-passagedata><tw-passagedata pid="8" name="q2" tags="" position="700,1050" size="100,100">(set: $awnser to &quot;&quot;)
 (set: $awnser to (prompt: &quot;In spices&#39; embrace, where whispers play,
 A canyon awaits in a sugary array.
 What runs but never walks, with a bed yet never sleeps?
 Crack the riddle, and Pepernoten Canyon secrets it keeps.&quot;,&quot;&quot;))
 
 (if:$awnser is &quot;river&quot; or $awnser is &quot;River&quot;)
-[As you confidently answer the chocolate frogs&#39; riddle, a magical shimmer surrounds them. With a joyous hop, the chocolate frogs leap aside, clearing the Candy Road for your onward journey. The path ahead beckons, and you continue your adventure through the enchanting sweetness of the Speculaas Village. [[go trough -&gt;succes]]]
-(else:)
-[(go-to:&quot;q2wrong&quot;)]
-
-</tw-passagedata><tw-passagedata pid="9" name="succes" tags="" position="1100,1000" size="100,100">As you correctly solve the riddle within the Dancing House, a magical transformation begins. The parchment seems to hold a secret power, and as you decipher the words, a small river emerges from beneath the note. The water flows gracefully, meandering through the streets of the Speculaas Village, carrying the enchantment of your success.
+[As you awnser the sign turns golden colour, a magical transformation begins. The sign seems to hold a secret power, a small river emerges from beneath the sign. The caramel flows gracefully, meandering through the streets of the Speculaas Village, carrying the enchantment of your success.
 
 Roleplay Piet, witnessing the spectacle, grins with delight. &quot;Ah, the magic of Pakjesavond responds to your wit, dear adventurer! Follow the newly-formed river, and it shall lead you to the gateway of Pepernoten Canyon.&quot;
 
-The river extends into the distance, beckoning you to embark on the next leg of your whimsical journey. With each step, the anticipation of the canyon&#39;s spice-scented wonders grows, and you follow the enchanting flow, ready for the mysteries that Pepernoten Canyon holds.
+The river extends into the distance, beckoning you to embark on the next leg of your  journey. With each step, the anticipation of the canyon&#39;s  wonders grows, and you follow the enchanting flow, ready for the mysteries that Pepernoten Canyon holds.
 
-[[follow the river -&gt;Pepernoten Canyon]] </tw-passagedata><tw-passagedata pid="10" name="q1wrong" tags="" position="900,450" size="100,100">The frogs jump up and down.. no no no, that is not correct [[try again -&gt;q1]] 
-</tw-passagedata><tw-passagedata pid="11" name="q2wrong" tags="" position="1100,700" size="100,100">That is not correct, No worries, adventurer! Let&#39;s give it another shot: [[try again-&gt;q2]] </tw-passagedata><tw-passagedata pid="12" name="Pepernoten Canyon" tags="" position="1100,1125" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="stroopwafel meadow," tags="" position="1100,1275" size="100,100">Puzzle: The Stepping Stones of Harmony
+[[follow the river -&gt;Pepernoten Canyon]] ]
+(else:)
+[That is not correct, No worries, adventurer! Let&#39;s give it another shot: [[try again-&gt;q2]] ]
+
+</tw-passagedata><tw-passagedata pid="9" name="Pepernoten Canyon" tags="" position="700,1175" size="100,100">when you enter the pepernoten canyon you see writing on the walls, the walls are covered with numbers and formula&#39;s. In the middle of it all the following text is standing:
+
+//Imagine you have a secret code that involves three consecutive integers. The product of the first and third integers, added to the square of the second integer, equals 46. What are the three consecutive integers?//
+
+[[Awnser the question -&gt;q3]]
+</tw-passagedata><tw-passagedata pid="10" name="stroopwafel meadow" tags="" position="700,1425" size="100,100">Puzzle: The Stepping Stones of Harmony
 
 As you reach Stroopwafel Meadow, you encounter a series of magical stepping stones floating above a caramel stream. Each stone emits a soft glow, and a harmonious melody fills the air. Roleplay Piet appears, offering a clue:
 
-&quot;Dear adventurer, to cross the meadow, you must step on the stones in a sequence that harmonizes with the enchanted tune. Listen carefully to the musical notes each stone produces. Align them in the correct order, and the path to Pakjesavond Plaza will unfold.&quot;
+&quot;Dear adventurer, to cross the  caramel stream, you must step on the stones in a sequence that harmonizes with the enchanted tune. Listen carefully to the musical notes each stone produces. Align them in the correct order, and the path to Pakjesavond Plaza will be yours.&quot;
 
 Stepping Stones:
 
-1. Vanilla Stone (Note: C)
+1. Vanilla Stone 
 &lt;audio controls&gt;
 	&lt;source src=&quot;piano-c_C_major.wav&quot; type=&quot;audio/wav&quot;&gt;
 	Your browser does not support the audio tag.
 &lt;/audio&gt; 
 
-2. Caramel Stone (Note: E)
+2. Caramel Stone 
 &lt;audio controls&gt;
 	&lt;source src=&quot;piano-e_E_major.wav&quot; type=&quot;audio/wav&quot;&gt;
 	Your browser does not support the audio tag.
 &lt;/audio&gt; 
 
-3. Chocolate Stone (Note: G)
+3. Chocolate Stone 
 &lt;audio controls&gt;
 	&lt;source src=&quot;piano-g_G_major.wav&quot; type=&quot;audio/wav&quot;&gt;
 	Your browser does not support the audio tag.
 &lt;/audio&gt; 
 
-4. Hazelnut Stone (Note: D)
+4. Hazelnut Stone 
 &lt;audio controls&gt;
 	&lt;source src=&quot;piano-d_D_major.wav&quot; type=&quot;audio/wav&quot;&gt;
 	Your browser does not support the audio tag.
 &lt;/audio&gt; 
 
-5. Honey Stone (Note: A)
+5. Honey Stone 
 &lt;audio controls&gt;
 	&lt;source src=&quot;piano-a_A_major.wav&quot; type=&quot;audio/wav&quot;&gt;
 	Your browser does not support the audio tag.
 &lt;/audio&gt; 
 
-The puzzle is to arrange the stepping stones in the correct order based on the musical notes they emit. Each stone represents a note, and your task is to create a harmonious melody by stepping on them in the right sequence. Successfully completing the puzzle will allow you to gracefully traverse Stroopwafel Meadow. Good luck!
-
-&lt;audio controls autoplay loop&gt;
-  &lt;source src=&quot;sounds/soundeffect.ogg&quot; type=&quot;audio/ogg&quot;&gt;
-Your browser does not support the &lt;code&gt;audio
-
-piano-a_A_major.wav</tw-passagedata><tw-passagedata pid="14" name="pakjes plaza" tags="" position="1100,1425" size="100,100">Puzzle: The Gift Unwrapping Enigma
+in what order do you step on the stones [[walk the stones -&gt;q4]]</tw-passagedata><tw-passagedata pid="11" name="pakjes plaza" tags="" position="700,1725" size="100,100">Puzzle: The Gift Unwrapping Enigma
 
 Upon reaching Pakjes Plaza, you are greeted by an array of beautifully wrapped gifts, each adorned with a different color and pattern. However, an enchantment surrounds them, and only by unraveling the mystery of their magical connections can you proceed.
 
@@ -194,10 +214,23 @@ Objective:
 Arrange the gifts in the correct order based on their magical connections. Each gift should be next to its paired counterpart. Once successfully solved, the magical threads will unravel, and the path to your Sinterklaas present will be revealed.
 
 May your unraveling skills bring forth the joy hidden within Pakjes Plaza!
-</tw-passagedata><tw-passagedata pid="15" name="test sound" tags="" position="1375,1275" size="100,100"> &lt;audio controls&gt;
-  &lt;source src=&quot;https://357lisa357.github.io/advanture_story_test/Piano-key-sound-effect.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
-  Your browser does not support the audio tag.
-&lt;/audio&gt; </tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="12" name="q4" tags="" position="700,1575" size="100,100">(set: $awnser to &quot;&quot;)
+(set: $awnser to (prompt: &quot;Fill in the order that you step on the stones like this 1,2,3,4,5&quot;,&quot;&quot;))
+
+(if:$awnser is &quot;5,1,4,2,3&quot; or $awnser is &quot;River&quot;)
+[As you take one step at a time the notes resonate and play buetful sounds with every step the song becomes louder and before you know it your on the other side [[follow the path -&gt;pakjes plaza]]]
+(else:)
+[ as you take a step the stones collapse under you you fall into the caramel stream, luckly you can get out a few houndered meters back, it is a little walk back but[[walk back-&gt;stroopwafel meadow]]]
+
+</tw-passagedata><tw-passagedata pid="13" name="q3" tags="" position="700,1300" size="100,100">(set: $awnser to &quot;&quot;)
+(set: $awnser to (prompt: &quot;Imagine you have a secret code that involves three consecutive integers. The product of the first and third integers, added to the square of the second integer, equals 46. What are the three consecutive integers? write as 1,2,3&quot;,&quot;&quot;))
+
+(if:$awnser is &quot;4,5,6&quot;)
+[As you say the awnser the pepernoten come down and a gate is opend in the wall before you can see a meadow filled stroopwafels [[Walk trough the gate -&gt;stroopwafel meadow]]]
+(else:)
+[Nothing seems to happen, No worries, adventurer! Let&#39;s give it another shot: [[try again-&gt;q3]] ]
+
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
